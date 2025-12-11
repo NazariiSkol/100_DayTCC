@@ -102,10 +102,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Libraries\SFML-2.6.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Libraries\SFML-2.6.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -116,35 +119,37 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Libraries\SFML-2.6.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-system.lib;sfml-window.lib;sfml-graphics.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Libraries\SFML-2.6.1\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="100_DayTCC.cpp" />
     <ClCompile Include="ElectricShocker.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyFactory.cpp" />
     <ClCompile Include="Essence.cpp" />
-    <ClCompile Include="ExpeditionItem.cpp" />
+    <ClCompile Include="EssenceFactory.cpp" />
     <ClCompile Include="Food.cpp" />
     <ClCompile Include="FoodWarehouse.cpp" />
-    <ClCompile Include="FoodWarehousesMap.cpp" />
+    <ClCompile Include="FriendlyEsences.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GasStation.cpp" />
-    <ClCompile Include="GasStationsMap.cpp" />
-    <ClCompile Include="HomeItem.cpp" />
+    <ClCompile Include="IEffect.cpp" />
+    <ClCompile Include="IItem.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemFactory.cpp" />
     <ClCompile Include="Location.cpp" />
-    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="NeutralEssences.cpp" />
     <ClCompile Include="PepperSpray.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Shop.cpp" />
-    <ClCompile Include="ShopsMap.cpp" />
     <ClCompile Include="Stew.cpp" />
-    <ClCompile Include="StewFactory.cpp" />
+    <ClCompile Include="StunEffect.cpp" />
     <ClCompile Include="TCC.cpp" />
     <ClCompile Include="TraumaticGun.cpp" />
     <ClCompile Include="Water.cpp" />
@@ -153,26 +158,26 @@
   <ItemGroup>
     <ClInclude Include="ElectricShocker.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyFactory.h" />
     <ClInclude Include="Essence.h" />
-    <ClInclude Include="ExpeditionItem.h" />
+    <ClInclude Include="EssenceFactory.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="FoodWarehouse.h" />
-    <ClInclude Include="FoodWarehousesMap.h" />
+    <ClInclude Include="FriendlyEsences.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GasStation.h" />
-    <ClInclude Include="GasStationsMap.h" />
-    <ClInclude Include="HomeItem.h" />
+    <ClInclude Include="IEffect.h" />
+    <ClInclude Include="IItem.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemFactory.h" />
     <ClInclude Include="Location.h" />
-    <ClInclude Include="Map.h" />
+    <ClInclude Include="NeutralEssences.h" />
     <ClInclude Include="PepperSpray.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RegistryFactory.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shop.h" />
-    <ClInclude Include="ShopsMap.h" />
     <ClInclude Include="Stew.h" />
-    <ClInclude Include="StewFactory.h" />
+    <ClInclude Include="StunEffect.h" />
     <ClInclude Include="TCC.h" />
     <ClInclude Include="TraumaticGun.h" />
     <ClInclude Include="Water.h" />

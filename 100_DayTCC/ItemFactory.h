@@ -2,7 +2,7 @@
 #include <memory>
 #include "Item.h"
 
-class ItemFactory
+class ItemFactory 
 {
 public:
 	virtual ~ItemFactory() = default;

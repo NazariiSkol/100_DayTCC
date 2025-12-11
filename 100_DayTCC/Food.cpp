@@ -1,6 +1,11 @@
 #include "Food.h"
 
-int Food::SetSaturationUnits(int saturation_units)
+int Food::GetWeight() const
 {
-    this->saturation_units = saturation_units;
+	return weight;
+}
+
+int Food::GetSaturation() const
+{
+	return saturation;
 }

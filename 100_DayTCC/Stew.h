@@ -1,8 +1,7 @@
 #pragma once
 #include "Food.h"
-class Stew : public Food
-{
-public:
- 
-};
 
+class Stew : public Food {
+public:
+    Stew();
+};

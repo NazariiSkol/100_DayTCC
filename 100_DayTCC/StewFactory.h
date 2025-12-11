@@ -5,6 +5,5 @@
 class StewFactory : public ItemFactory
 {
 	std::unique_ptr<Item> CreateItem() const override;
-
 };
 
