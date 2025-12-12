@@ -4,8 +4,7 @@
 #include "Game.h"
 #include "Stew.h"   
 #include "Food.h"   
-#include "Item.h"       
-#include "ItemFactory.h" 
+#include "Item.h"        
 #include "RegistryFactory.h"    
 
 using namespace std;
@@ -16,11 +15,12 @@ int main() {
     Game game;
     game.run();
     
-    RegistryFactory<Food> foodFactory;
-    foodFactory.Register<Stew>("stew");
+    RegistryFactory<Item> foodFactory;
+    foodFactory.Register<Item>("stew");
 
     auto stew = foodFactory.Create("stew");
-
+   
+    stew -> 
     return 0;
 }
 

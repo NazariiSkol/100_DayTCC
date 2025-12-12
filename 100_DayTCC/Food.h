@@ -1,7 +1,7 @@
 #pragma once
 #include "IItem.h"
 
-class Food : public IItem {
+class Food : public Item {
 protected:
     int weight = 0;
     int saturation = 0;
