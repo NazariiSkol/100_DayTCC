@@ -16,17 +16,11 @@
     <Filter Include="Factories">
       <UniqueIdentifier>{257aa48e-4409-43da-a25b-47c4310a135e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Interfaces">
-      <UniqueIdentifier>{1233fcb6-caa1-45cb-97c2-19181d55585b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Items">
       <UniqueIdentifier>{e2d57bfe-d5aa-4cbe-b2a6-2674de75eec3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Items\BaseItems">
       <UniqueIdentifier>{4d67ba74-77fe-4afe-b0e6-95d899c66e36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Items\Foods">
-      <UniqueIdentifier>{47fb844c-9aa9-49a1-a863-f62071849b64}</UniqueIdentifier>
     </Filter>
     <Filter Include="Items\Weapons">
       <UniqueIdentifier>{5771b6bf-82af-481f-9168-2e7ee4383f9f}</UniqueIdentifier>
@@ -39,6 +33,12 @@
     </Filter>
     <Filter Include="Items\Weapons\Effects">
       <UniqueIdentifier>{e0543839-4bb3-4b8d-b96b-f20316a33293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameWindows">
+      <UniqueIdentifier>{9ff2f0c9-165a-4c64-9e23-8f21c8c6a28b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Items\Foods">
+      <UniqueIdentifier>{47fb844c-9aa9-49a1-a863-f62071849b64}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -90,32 +90,32 @@
     <ClCompile Include="FriendlyEsences.cpp">
       <Filter>Essence</Filter>
     </ClCompile>
-    <ClCompile Include="ElectricShocker.cpp">
-      <Filter>Items\Weapons</Filter>
-    </ClCompile>
-    <ClCompile Include="PepperSpray.cpp">
-      <Filter>Items\Weapons</Filter>
-    </ClCompile>
-    <ClCompile Include="TraumaticGun.cpp">
-      <Filter>Items\Weapons</Filter>
-    </ClCompile>
     <ClCompile Include="Shop.cpp">
       <Filter>Locations</Filter>
     </ClCompile>
     <ClCompile Include="TCC.cpp">
       <Filter>Essence</Filter>
     </ClCompile>
-    <ClCompile Include="IItem.cpp">
-      <Filter>Interfaces</Filter>
-    </ClCompile>
-    <ClCompile Include="IEffect.cpp">
-      <Filter>Interfaces</Filter>
-    </ClCompile>
     <ClCompile Include="StunEffect.cpp">
       <Filter>Items\Weapons\Effects</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>GameWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="IEffect.cpp">
+      <Filter>Items\Weapons\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="IItem.cpp">
+      <Filter>Items\BaseItems</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>GameWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>GameWindows</Filter>
+    </ClCompile>
+    <ClCompile Include="LoreState.cpp">
+      <Filter>GameWindows</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -164,29 +164,14 @@
     <ClInclude Include="FoodWarehouse.h">
       <Filter>Locations</Filter>
     </ClInclude>
-    <ClInclude Include="ElectricShocker.h">
-      <Filter>Items\Weapons</Filter>
-    </ClInclude>
     <ClInclude Include="Shop.h">
       <Filter>Locations</Filter>
-    </ClInclude>
-    <ClInclude Include="TraumaticGun.h">
-      <Filter>Items\Weapons</Filter>
-    </ClInclude>
-    <ClInclude Include="PepperSpray.h">
-      <Filter>Items\Weapons</Filter>
     </ClInclude>
     <ClInclude Include="TCC.h">
       <Filter>Essence</Filter>
     </ClInclude>
-    <ClInclude Include="IItem.h">
-      <Filter>Interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="ItemFactory.h">
       <Filter>Factories</Filter>
-    </ClInclude>
-    <ClInclude Include="IEffect.h">
-      <Filter>Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="RegistryFactory.h">
       <Filter>Factories</Filter>
@@ -195,7 +180,25 @@
       <Filter>Items\Weapons\Effects</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>GameWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="IEffect.h">
+      <Filter>Items\Weapons\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="IItem.h">
+      <Filter>Items\BaseItems</Filter>
+    </ClInclude>
+    <ClInclude Include="IState.h">
+      <Filter>GameWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>GameWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>GameWindows</Filter>
+    </ClInclude>
+    <ClInclude Include="LoreState.h">
+      <Filter>GameWindows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,21 +1,25 @@
 #include "Game.h"
-#include <iostream>
 
-Game::Game(): window(sf::VideoMode(800, 600), "Text-based SFML Game")
-    
+Game::Game() : window(sf::VideoMode::getDesktopMode(),"100 секунд",sf::Style::Fullscreen) 
 {
-    // Загружаем шрифт
     if (!font.loadFromFile("arial.ttf")) {
         std::cerr << "Не удалось загрузить шрифт!\n";
     }
 
-    // Настройка текстового объекта
-    text.setFont(font);          // ДОЛЖНО БЫТЬ
-    text.setCharacterSize(32);
-    text.setFillColor(sf::Color::White);
-    text.setPosition(20.f, 20.f);
+    // Первое состояние — главное меню
+    changeState(new MenuState (*this, font));
+}
 
-    text.setString(L"Добро пожаловать в текстовую игру!");
+Game::~Game() {
+    if (currentState)
+        delete currentState;
+}
+
+void Game::changeState(IState* newState) {
+    if (currentState)
+        delete currentState;
+
+    currentState = newState;
 }
 
 void Game::run() {
@@ -27,19 +31,15 @@ void Game::run() {
 }
 
 void Game::processEvents() {
-    sf::Event event;
-    while (window.pollEvent(event)) {
-        if (event.type == sf::Event::Closed)
-            window.close();
-    }
+    currentState->handleEvents(window);
 }
 
 void Game::update() {
-   
+    currentState->update();
 }
 
 void Game::render() {
     window.clear(sf::Color::Black);
-    window.draw(text);
+    currentState->render(window);
     window.display();
 }

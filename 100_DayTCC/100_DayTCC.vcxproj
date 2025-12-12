@@ -130,7 +130,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="100_DayTCC.cpp" />
-    <ClCompile Include="ElectricShocker.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Essence.cpp" />
     <ClCompile Include="EssenceFactory.cpp" />
@@ -138,25 +137,25 @@
     <ClCompile Include="FoodWarehouse.cpp" />
     <ClCompile Include="FriendlyEsences.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="GasStation.cpp" />
     <ClCompile Include="IEffect.cpp" />
     <ClCompile Include="IItem.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="ItemFactory.cpp" />
     <ClCompile Include="Location.cpp" />
+    <ClCompile Include="LoreState.cpp" />
+    <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="NeutralEssences.cpp" />
-    <ClCompile Include="PepperSpray.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Shop.cpp" />
     <ClCompile Include="Stew.cpp" />
     <ClCompile Include="StunEffect.cpp" />
     <ClCompile Include="TCC.cpp" />
-    <ClCompile Include="TraumaticGun.cpp" />
     <ClCompile Include="Water.cpp" />
     <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ElectricShocker.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Essence.h" />
     <ClInclude Include="EssenceFactory.h" />
@@ -164,14 +163,17 @@
     <ClInclude Include="FoodWarehouse.h" />
     <ClInclude Include="FriendlyEsences.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="GasStation.h" />
     <ClInclude Include="IEffect.h" />
     <ClInclude Include="IItem.h" />
+    <ClInclude Include="IState.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="ItemFactory.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="LoreState.h" />
+    <ClInclude Include="MenuState.h" />
     <ClInclude Include="NeutralEssences.h" />
-    <ClInclude Include="PepperSpray.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RegistryFactory.h" />
     <ClInclude Include="resource.h" />
@@ -179,7 +181,6 @@
     <ClInclude Include="Stew.h" />
     <ClInclude Include="StunEffect.h" />
     <ClInclude Include="TCC.h" />
-    <ClInclude Include="TraumaticGun.h" />
     <ClInclude Include="Water.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>

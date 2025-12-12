@@ -1,17 +1,22 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <string>
+#include "IState.h"
+#include <iostream>
+#include "MenuState.h"  
 
 class Game {
 public:
     Game();
+    ~Game();
+
     void run();
+    void changeState(IState* newState);
+
+    sf::RenderWindow window;  
 
 private:
-    sf::RenderWindow window;
     sf::Font font;
-    sf::Text text;
-    std::wstring message;
+    IState* currentState = nullptr;
 
     void processEvents();
     void update();
