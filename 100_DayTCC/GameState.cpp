@@ -1,5 +1,5 @@
 ﻿#include "GameState.h"
-
+ 
 GameState::GameState(Game& g, sf::Font& f)
     : game(g), font(f)
 {
@@ -37,5 +37,19 @@ void GameState::update() {
 }
 
 void GameState::render(sf::RenderWindow& window) {
-    window.draw(title);
+    // 1. Створюємо або оновлюємо текст (зазвичай це поле класу, а не локальна змінна)
+    sf::Text inventoryText;
+    inventoryText.setFont(font); // font завантажений у Game
+    inventoryText.setCharacterSize(20);
+    inventoryText.setFillColor(sf::Color::White);
+    inventoryText.setPosition(50, 50); // Позиція на екрані
+
+    // 2. Отримуємо актуальний рядок від гравця
+    std::string info = game.player.GetInventoryString();
+
+    // 3. Встановлюємо рядок
+    inventoryText.setString(info);
+
+    // 4. Малюємо
+    window.draw(inventoryText);
 }

@@ -1,9 +1,12 @@
 #pragma once
 #include "IState.h"
 #include "Game.h"   
+#include <string>
+#include "Player.h"
 #include <SFML/Graphics.hpp>
 
 class Game;
+class Player;   
 
 class GameState : public IState {
 public:

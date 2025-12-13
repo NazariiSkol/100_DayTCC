@@ -6,6 +6,10 @@ Game::Game() : window(sf::VideoMode::getDesktopMode(),"100 секунд",sf::Style::Fu
         std::cerr << "Не удалось загрузить шрифт!\n";
     }
 
+    player.PickUpItem(std::make_unique<Stew>());
+    player.PickUpItem(std::make_unique<Stew>());
+    player.PickUpItem(std::make_unique<Stew>());
+
     // Первое состояние — главное меню
     changeState(new MenuState (*this, font));
 }

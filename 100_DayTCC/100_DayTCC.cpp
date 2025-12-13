@@ -15,12 +15,12 @@ int main() {
     Game game;
     game.run();
     
-    RegistryFactory<Item> foodFactory;
-    foodFactory.Register<Item>("stew");
+    // RegistryFactory<Item> foodFactory;
+    //foodFactory.Register<Food>("stew");
 
-    auto stew = foodFactory.Create("stew");
-   
-    stew -> 
+   //auto stew = foodFactory.Create("stew");
+  
+    
     return 0;
 }
 
