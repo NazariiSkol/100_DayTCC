@@ -9,5 +9,5 @@ public:
     Stew();
 
     int GetSaturation() const override;
-    std::string GetName() const override;
+    std::wstring GetName() const override;
 };

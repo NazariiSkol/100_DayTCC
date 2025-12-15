@@ -161,6 +161,9 @@
     <ClInclude Include="LoreState.h">
       <Filter>GameWindows</Filter>
     </ClInclude>
+    <ClInclude Include="HouseSystem.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="100_DayTCC.rc">

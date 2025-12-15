@@ -11,7 +11,7 @@ int Stew::GetSaturation() const
 	return saturation;
 }
 
-std::string Stew::GetName() const
+std::wstring Stew::GetName() const 
 {
-	return "Тушонка";
+	return L"Тушонка"; // Обов'язково L
 }

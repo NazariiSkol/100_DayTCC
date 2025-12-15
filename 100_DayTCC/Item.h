@@ -1,11 +1,16 @@
 #pragma once
-#include "IItem.h" 
+#include "IItem.h"
 #include <string>
 
 class Item : public IItem {
 protected:
     int weight;
+
 public:
-    int GetWeight() const override;
-    virtual std::string GetName() const = 0;
+    virtual ~Item() = default;
+
+    int GetWeight() const override; // Реалізація в Item.cpp
+
+    // Тільки wstring!
+    virtual std::wstring GetName() const = 0;
 };

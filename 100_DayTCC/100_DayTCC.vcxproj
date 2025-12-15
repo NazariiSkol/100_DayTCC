@@ -156,6 +156,7 @@
     <ClInclude Include="FriendlyEsences.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="HouseSystem.h" />
     <ClInclude Include="IItem.h" />
     <ClInclude Include="IState.h" />
     <ClInclude Include="Item.h" />
